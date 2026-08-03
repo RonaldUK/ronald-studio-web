@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio Premium with n8n Chat",
+  "description": "A minimalist UX-focused portfolio featuring a real-time chat widget integrated with n8n webhooks for automated responses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

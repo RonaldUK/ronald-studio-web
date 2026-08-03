@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Premium | Minimalismo & UX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        charcoal: '#36454F',
+                        cobalt: '#0047AB',
+                    },
+                    animation: {
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Estilos Ultra-Neon */
+        @keyframes spin-neon {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        :root {
+            --neon-speed: 3s;
+            --neon-speed-hover: 0.6s;
+        }
+
+        .neon-border-wrapper {
+            position: relative;
+            padding: 2px;
+            border-radius: 9999px;
+            overflow: hidden;
+            display: inline-block;
+            background: #000;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .neon-border-wrapper:hover { transform: scale(1.05); }
+
+        .neon-border-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                #0047AB 60deg,
+                transparent 120deg,
+                #3b82f6 180deg,
+                transparent 240deg,
+                #0047AB 300deg,
+                transparent 360deg
+            );
+            animation: spin-neon var(--neon-speed) linear infinite;
+            filter: blur(15px);
+            z-index: -1;
+            transition: animation-duration 0.3s ease;
+        }
+
+        .neon-border-wrapper:hover .neon-border-glow {
+            animation-duration: var(--neon-speed-hover);
+            filter: blur(8px);
+        }
+
+        .neon-border-inner {
+            position: relative;
+            background: #000;
+            border-radius: 9999px;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+        }
+
+        .neon-outer-glow {
+            position: absolute;
+            inset: -15px;
+            background: radial-gradient(circle, rgba(0,71,171,0.4) 0%, transparent 70%);
+            opacity: 0.8;
+            z-index: -2;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .neon-border-wrapper:hover .neon-outer-glow { opacity: 1; transform: scale(1.2); }
+
+        /* Glassmorphism para el Modal */
+        .glass-modal {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.48.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white text-charcoal antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

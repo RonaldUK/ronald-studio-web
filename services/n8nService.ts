@@ -30,6 +30,6 @@ export const sendMessageToN8N = async (text: string): Promise<string> => {
 
   } catch (error) {
     console.error("Error conectando con n8n:", error);
-    return "Lo siento ---------- ), mis sistemas están en mantenimiento en este momento.";
+    return "Lo siento :(, mis sistemas están en mantenimiento en este momento.";
   }
 };

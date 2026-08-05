@@ -1,7 +1,7 @@
 // services/n8nService.ts
 
 // Esta es la URL de PRODUCCIÓN de tu n8n
-const N8N_WEBHOOK_URL = 'https://ambitious-jacamar.pikapod.net/webhook-test/3e9f0456-198f-4ec7-9c7a-85822f93acf8';
+const N8N_WEBHOOK_URL = 'https://ambitious-jacamar.pikapod.net/webhook/3e9f0456-198f-4ec7-9c7a-85822f93acf8';
 
 export const sendMessageToN8N = async (text: string): Promise<string> => {
   try {

@@ -12,12 +12,12 @@ export const Hero: React.FC = () => {
   const requestRef = useRef<number>(null);
 
   const projects: Project[] = [
-    { id: 1, title: "Fintech", desc: "Rediseño bancario.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
-    { id: 2, title: "Arquitectura", desc: "Sitio inmersivo.", img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80" },
-    { id: 3, title: "E-commerce", desc: "Venta de plantas.", img: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80" },
-    { id: 4, title: "Meditación", desc: "Calma visual.", img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
-    { id: 5, title: "Legal", desc: "Identidad corporativa.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" },
-    { id: 6, title: "Revista", desc: "Layout dinámico.", img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" },
+    { id: 1, title: "Tienda Online", desc: "Rediseño bancario.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
+    { id: 2, title: "Agentes Inteligentes", desc: "Sitio inmersivo.", img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80" },
+    { id: 3, title: "Diseño Estructural", desc: "Venta de plantas.", img: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80" },
+    { id: 4, title: "Diseño Grafico", desc: "Calma visual.", img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" },
+    { id: 5, title: "Robotica", desc: "Identidad corporativa.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" },
+    { id: 6, title: "Ingenieria", desc: "Layout dinámico.", img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" },
   ];
 
   const animate = useCallback(() => {

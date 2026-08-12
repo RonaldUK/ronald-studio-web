@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className={`font-bold text-xl tracking-tight transition-colors duration-300 ${scrolled ? 'text-charcoal' : 'text-white'}`}>
-            RONALD STUDIO US.
+              AO RNLD US.
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#proyectos" className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-cobalt' : 'text-white/80 hover:text-white'}`}>Proyectos</a>

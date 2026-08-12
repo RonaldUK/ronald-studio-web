@@ -7,7 +7,7 @@ import { sendMessageToN8N } from '../services/n8nService';
 export const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: 'welcome', text: "¡Hola! Bienvenido a Studio Ronald Us. ¿En qué puedo ayudarte hoy?", sender: 'bot' }
+    { id: 'welcome', text: "¡Hola! Bienvenido a Studio Ao-Us. ¿En qué puedo ayudarte hoy?", sender: 'bot' }
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -58,7 +58,7 @@ export const ChatWidget: React.FC = () => {
             <div className="flex items-center space-x-2">
               <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
               <span className="text-white font-medium text-sm">
-                {isTyping ? 'Ronald Studio escribiendo...' : 'Ronald Studio Online'}
+                {isTyping ? 'escribiendo...' : 'AO-US Studio Online'}
               </span>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
@@ -82,7 +82,7 @@ export const ChatWidget: React.FC = () => {
             {isTyping && (
               <div className="flex justify-start mb-3">
                 <div className="bg-white text-gray-400 border border-gray-100 px-4 py-2 rounded-2xl rounded-bl-none text-xs italic">
-                  Ronald Studio está procesando...
+                  Se está procesando...
                 </div>
               </div>
             )}
